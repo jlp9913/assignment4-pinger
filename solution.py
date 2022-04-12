@@ -121,7 +121,7 @@ def ping(host, timeout=1):
     for i in range(0,4): #Four pings will be sent (loop runs for i=0, 1, 2, 3)
         delay = doOnePing(dest, timeout)
         #print(delay)
-        if isInstance(delay, str): delay = 0
+        if isinstance(delay, str): delay = 0
         all_delays.append(delay)
         time.sleep(1)  # one second
         
